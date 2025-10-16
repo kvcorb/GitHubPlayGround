@@ -690,6 +690,9 @@ mdr=0; % Initialization necessary for MATLAB C-Coder
 if length(lms)>1 || (isstruct(lms) && isfield(lms,'bsb'))
     if length(lms)>1
         bs=lms;
+    elseif
+        bs=lms.bsb;
+    end
     else
         bs=lms.bsb;
     end
